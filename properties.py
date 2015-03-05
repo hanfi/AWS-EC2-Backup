@@ -3,7 +3,7 @@
 #instance Name
 instance_name = "myInstanceToBackup"
 #dry run
-is_dry_run = True
+is_dry_run = False
 #Custom Metric Name
 metric_name = "EC2BackupTool"
 #Custom Metric Dimensions
