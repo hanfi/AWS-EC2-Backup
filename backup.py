@@ -30,6 +30,8 @@ try:
     start_time = time.time()
     #image creation
     image_id = ec2_conn.create_image(instance_meta["instance-id"], name, name, True, None, properties.is_dry_run)
+    #Wait 30seconds because because sometimes the AWS images isn't available directly after it's creation
+    time.sleep(30)
     #get image object to add tags
     image = ec2_conn.get_image(image_id)
     #Waiting for the
